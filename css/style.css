@@ -34,12 +34,13 @@ body {
 }
 
 .local-cidade {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 100;
+    font-family: "Noto Serif", serif;
 }
 
 .local-estado {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 100;
     font-family: "Noto Serif", serif;
 }
@@ -63,9 +64,9 @@ body {
 }
 
 .graus {
-    font-size: 18px;
     font-family: "Oxygen", sans-serif;
-    position: absolute;
+
+    margin-top: 6px;
 }
 .procurar {
     width: 100%;
@@ -94,4 +95,12 @@ body {
     font-size: 1.6rem;
     font-family: "Noto Serif", serif;
     margin-top: 5px;
+}
+
+.container-clima-imagem {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }

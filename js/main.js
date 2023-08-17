@@ -7,6 +7,7 @@ const pais = document.querySelector(".pais");
 const temperatura = document.querySelector(".temperatura");
 const clima = document.querySelector(".clima");
 const graus = document.querySelector(".graus");
+const img = document.querySelector(".imagem");
 
 const chave = "7143e952cbe241aa8fd181458231108";
 
@@ -15,8 +16,8 @@ async function pegaDados(cidade) {
         `http://api.weatherapi.com/v1/current.json?key=${chave}&q=${cidade}&aqi=no`
     );
     const dado = await resposta.json();
-    console.log(dado);
     informa(dado);
+    pegaIcone(dado);
 }
 
 function recebeCidade() {
@@ -28,10 +29,17 @@ function recebeCidade() {
 }
 
 function informa(dado) {
-    cidade.innerHTML = `${dado["location"]["name"]},`;
-    estado.innerHTML = dado["location"]["region"];
+    cidade.innerHTML = `${dado["location"]["name"]}`;
+    estado.innerHTML = `${dado["location"]["region"]},`;
     pais.innerHTML = dado["location"]["country"];
-    temperatura.innerHTML = `${dado["current"]["temp_c"]}`;
+    temperatura.innerText = `${dado["current"]["temp_c"]}` + graus.innerText;
     clima.innerHTML = dado["current"]["condition"]["text"];
 }
+
+function pegaIcone(link) {
+    const url = link["current"]["condition"]["icon"];
+    img.src = url;
+    return console.log(img);
+}
+
 recebeCidade();
