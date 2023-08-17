@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,25 @@
     <title>Tempo e Clima</title>
 </head>
 <body>
-    <div class="container-principal">
+    <form class="container-principal">
         <div class="local">
-            <h1 class="local-cidade">Ilhéus,</h1>
-            <p class="local-estado">Bahia</p>
+            <h1 class="local-cidade">Brasilia,</h1>
+            <p class="local-estado">distrito federal</p>
         </div>
 
-        <h2 class="pais">Brazil</h2>
-        <span class="temperatura">28°</span>
-        <input class="procurar" type="text" required>
+        <h2 class="pais"></h2>
+        <div class="container temperatura">
+            <span class="temperatura">27</span>
+            <span class="graus">°c</span>
+        </div>
+        <input class="procurar" type="text">
+        <input class="enviar" type="submit">
         <div>
-            <p class="clima">sol</p>
+            <p class="clima">cloud</p>
             <img>
         </div>
-        <h3 class="umidade">Umidade: </h3>
-    </div>
+       
+    </form>
+    <script src="./js/main.js"></script>
 </body>
 </html>

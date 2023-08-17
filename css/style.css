@@ -50,12 +50,23 @@ body {
     font-family: "Noto Serif", serif;
 }
 
+.container-temperatura {
+    display: flex;
+    position: relative;
+}
+
 .temperatura {
     font-size: 4rem;
     font-family: "Oxygen", sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
+.graus {
+    font-size: 18px;
+    font-family: "Oxygen", sans-serif;
+    position: absolute;
+}
 .procurar {
     width: 100%;
     max-width: 150px;
@@ -67,12 +78,20 @@ body {
     font-size: 15px;
 }
 
+.enviar {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 0;
+    width: 100px;
+    font-size: 1rem;
+    font-family: "Noto Serif", serif;
+    color: #1e62a7;
+    font-weight: 700;
+}
+
 .clima {
     font-size: 1.6rem;
     font-family: "Noto Serif", serif;
-}
-
-.umidade {
-    font-size: 1.2rem;
-    font-family: "Noto Serif", serif;
+    margin-top: 5px;
 }
